@@ -1,0 +1,41 @@
+@charset "UTF-8";
+
+@import "utils/variables";
+// @import "utils/functions";
+@import "utils/border";
+@import "utils/mixins";
+@import "utils/helpers";
+// @import "utils/animations";
+
+
+
+@import "base/normalize";
+@import "base/base";
+
+@import "components/icons";
+@import "components/button";
+
+@import "layout/layer";
+
+// 聚蓝领scss   以上均为公共的scss  以下为项目对应scss  
+// 首页scss  klxin
+@import "pages/index";
+
+
+
+
+
+
+// 以下类名可以在 全局html中使用
+.clearfix{
+    @include clearfix();
+}
+.elipsisMulti{
+    @include elipsisMulti(2);
+}
+.bdt{
+  @include border(1px 0 0,$border);
+}
+.bdm{
+  @include border(0 0 1px,$border);
+}

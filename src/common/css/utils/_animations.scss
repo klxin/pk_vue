@@ -1,0 +1,386 @@
+@charset "UTF-8";
+
+//CSS3动画，包括自己写的和animate.css
+
+@-webkit-keyframes slideInUp {
+  0% {
+    -webkit-transform: translate3d(0, 100%, 0);
+    transform: translate3d(0, 100%, 0);
+    visibility: visible;
+  }
+
+  100% {
+    -webkit-transform: translate3d(0, 0, 0);
+    transform: translate3d(0, 0, 0);
+  }
+}
+
+@keyframes slideInUp {
+  0% {
+    -webkit-transform: translate3d(0, 100%, 0);
+    transform: translate3d(0, 100%, 0);
+    visibility: visible;
+  }
+
+  100% {
+    -webkit-transform: translate3d(0, 0, 0);
+    transform: translate3d(0, 0, 0);
+  }
+}
+
+@-webkit-keyframes bounceInUp {
+  0%, 60%, 75%, 90%, 100% {
+    -webkit-transition-timing-function: cubic-bezier(0.215, 0.610, 0.355, 1.000);
+    transition-timing-function: cubic-bezier(0.215, 0.610, 0.355, 1.000);
+  }
+
+  0% {
+    opacity: 0;
+    -webkit-transform: translate3d(0, 30.00rem, 0);
+    transform: translate3d(0, 30.00rem, 0);
+  }
+
+  60% {
+    opacity: 1;
+    -webkit-transform: translate3d(0, -.20rem, 0);
+    transform: translate3d(0, -.20rem, 0);
+  }
+
+  75% {
+    -webkit-transform: translate3d(0, .10rem, 0);
+    transform: translate3d(0, .10rem, 0);
+  }
+
+  90% {
+    -webkit-transform: translate3d(0, -.05rem, 0);
+    transform: translate3d(0, -.05rem, 0);
+  }
+
+  100% {
+    -webkit-transform: translate3d(0, 0, 0);
+    transform: translate3d(0, 0, 0);
+  }
+}
+
+@keyframes bounceInUp {
+  0%, 60%, 75%, 90%, 100% {
+    -webkit-transition-timing-function: cubic-bezier(0.215, 0.610, 0.355, 1.000);
+    transition-timing-function: cubic-bezier(0.215, 0.610, 0.355, 1.000);
+  }
+
+  0% {
+    opacity: 0;
+    -webkit-transform: translate3d(0, 30.00rem, 0);
+    transform: translate3d(0, 30.00rem, 0);
+  }
+
+  60% {
+    opacity: 1;
+    -webkit-transform: translate3d(0, -.20rem, 0);
+    transform: translate3d(0, -.20rem, 0);
+  }
+
+  75% {
+    -webkit-transform: translate3d(0, .10rem, 0);
+    transform: translate3d(0, .10rem, 0);
+  }
+
+  90% {
+    -webkit-transform: translate3d(0, -.05rem, 0);
+    transform: translate3d(0, -.05rem, 0);
+  }
+
+  100% {
+    -webkit-transform: translate3d(0, 0, 0);
+    transform: translate3d(0, 0, 0);
+  }
+}
+
+@-webkit-keyframes shoppingRightIn {
+  0% {
+    opacity: 0;
+    -webkit-transform: translate3d(100%,0,0);
+    transform: translate3d(100%,0,0);
+  }
+
+  100% {
+    opacity: 1;
+    -webkit-transform: translate3d(0,0,0);
+    transform: translate3d(0,0,0);
+  }
+}
+
+@keyframes shoppingRightIn {
+  0% {
+    opacity: 0;
+    -webkit-transform: translate3d(100%,0,0);
+    transform: translate3d(100%,0,0);
+  }
+
+  100% {
+    opacity: 1;
+    -webkit-transform: translate3d(0,0,0);
+    transform: translate3d(0,0,0);
+  }
+}
+
+@-webkit-keyframes shoppingRightOut {
+  0% {
+    opacity: 1;
+    -webkit-transform: translate3d(0,0,0);
+    transform: translate3d(0,0,0);
+  }
+
+  100% {
+    opacity: 0;
+    -webkit-transform: translate3d(100%,0,0);
+    transform: translate3d(100%,0,0);
+  }
+}
+
+@keyframes shoppingRightOut {
+  0% {
+    opacity: 1;
+    -webkit-transform: translate3d(0,0,0);
+    transform: translate3d(0,0,0);
+  }
+
+  100% {
+    opacity: 0;
+    -webkit-transform: translate3d(100%,0,0);
+    transform: translate3d(100%,0,0);
+  }
+}
+
+.shopping-right-in, .shopping-right-out {
+  -webkit-animation-duration: 0.3s;
+  animation-duration: 0.3s;
+  -webkit-animation-fill-mode: both;
+  animation-fill-mode: both;
+}
+
+.shopping-right-in {
+  -webkit-animation-name: shoppingRightIn;
+  animation-name: shoppingRightIn;
+}
+
+.shopping-right-out {
+  -webkit-animation-name: shoppingRightOut;
+  animation-name: shoppingRightOut;
+}
+.shopping-rotate{
+  -webkit-animation-duration: 0.3s;
+  animation-duration: 0.3s;
+  -webkit-animation-fill-mode: both;
+  animation-fill-mode: both;
+  -webkit-animation-name: rotate360;
+  animation-name: rotate360;
+}
+
+@-webkit-keyframes fadeIn {
+  0% {
+    opacity: 0;
+  }
+
+  100% {
+    opacity: 1;
+  }
+}
+
+@keyframes fadeIn {
+  0% {
+    opacity: 0;
+  }
+
+  100% {
+    opacity: 1;
+  }
+}
+
+@-webkit-keyframes fadeOut {
+  0% {
+    opacity: 1;
+  }
+
+  100% {
+    opacity: 0;
+  }
+}
+
+@keyframes fadeOut {
+  0% {
+    opacity: 1;
+  }
+
+  100% {
+    opacity: 0;
+  }
+}
+
+@-webkit-keyframes btn-search {
+  0% {
+    left: .09rem;
+  }
+
+  100% {
+    left: 90%;
+  }
+}
+
+@keyframes btn-search {
+  0% {
+    left: 9rem;
+  }
+
+  100% {
+    left: 90%;
+  }
+}
+
+@-webkit-keyframes rotate360 {
+  0% {
+    -webkit-transform: rotate(0);
+  }
+  100% {
+    -webkit-transform: rotate(360deg);
+  }
+}
+
+@keyframes rotate360 {
+  0% {
+    transform: rotate(0);
+  }
+  100% {
+    transform: rotate(360deg);
+  }
+}
+
+@-webkit-keyframes rtl-move {
+  0% {
+    -webkit-transform: translate3d(200%, -50%, 0);
+    opacity: .55
+  }
+  40% {
+    -webkit-transform: translate3d(0, -50%, 0);
+    opacity: 1
+  }
+  100% {
+    -webkit-transform: translate3d(0%, -50%, 0);
+    opacity: 0
+  }
+}
+@keyframes rtl-move {
+  0% {
+    -webkit-transform: translate3d(200%, -50%, 0);
+    opacity: .55
+  }
+  40% {
+    -webkit-transform: translate3d(0, -50%, 0);
+    opacity: 1
+  }
+  100% {
+    -webkit-transform: translate3d(0%, -50%, 0);
+    opacity: 0
+  }
+}
+
+@-webkit-keyframes couponCodeDown {
+  0% {
+    height: 0
+  }
+
+  100% {
+    height: 370px  
+  }
+}
+
+@keyframes couponCodeDown {
+  0% {
+    height: 0
+  }
+
+  100% {
+    height: 370px   
+  }
+}
+@-webkit-keyframes couponCodeUp {
+  0% {
+    height: 370px
+  }
+
+  100% {
+    height: 0  
+  }
+}
+
+@keyframes couponCodeUp {
+  0% {
+    height: 370px
+  }
+
+  100% {
+    height: 0  
+  }
+}
+@-webkit-keyframes couponCodeDownO {
+  0% {
+    height: 0
+  }
+
+  100% {
+    height: 390px   
+  }
+}
+
+@keyframes couponCodeDownO {
+  0% {
+    height: 0
+  }
+
+  100% {
+    height: 390px   
+  }
+}
+@-webkit-keyframes couponCodeUpO {
+  0% {
+    height: 390px
+  }
+
+  100% {
+    height: 0  
+  }
+}
+
+@keyframes couponCodeUpO {
+  0% {
+    height: 390px
+  }
+
+  100% {
+    height: 0  
+  }
+}
+.coupon-code-down{
+  -webkit-animation-duration: 0.3s;
+  animation-duration: 0.3s;
+  -webkit-animation-fill-mode: both;
+  animation-fill-mode: both;
+  -webkit-animation-name: couponCodeDown;
+  animation-name: couponCodeDown;
+}
+.coupon-code-up{
+  -webkit-animation-duration: 0.3s;
+  animation-duration: 0.3s;
+  -webkit-animation-fill-mode: both;
+  animation-fill-mode: both;
+  -webkit-animation-name: couponCodeUp;
+  animation-name: couponCodeUp;
+}
+.coupon-with-verify.coupon-code-down{
+  -webkit-animation-name: couponCodeDownO;
+  animation-name: couponCodeDownO;
+}
+.coupon-with-verify.coupon-code-up{
+  -webkit-animation-name: couponCodeUpO;
+  animation-name: couponCodeUpO;
+}

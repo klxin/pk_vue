@@ -1,0 +1,107 @@
+@charset "UTF-8";
+
+// translate center
+@mixin center-translate($direction: both) {
+    position: absolute;
+    @if $direction == both {
+        top: 50%;
+        left: 50%;
+        -webkit-transform: translate(-50%, -50%);
+        transform: translate(-50%, -50%);
+    }
+    @else if $direction == x {
+        left: 50%;
+        -webkit-transform: translate(-50%, 0);
+        transform: translate(-50%, 0);
+    }
+    @else if $direction == y {
+        top: 50%;
+        -webkit-transform: translate(0, -50%);
+        transform: translate(0, -50%);
+    }
+}
+
+// flexbox兼容
+@mixin flexbox() {
+  display: -webkit-box;
+  display: -moz-box;
+  display: -ms-flexbox;
+  display: -webkit-flex;
+  display: flex;
+}
+
+@mixin arrow($direction: right, $size: .10rem, $borderColor: $gray, $borderSize: .02rem) {
+    display: inline-block;
+    vertical-align: middle;
+    width: $size;
+    height: $size;
+    @if $direction == top {
+        border-top: $borderSize solid $borderColor;
+        border-right: $borderSize solid $borderColor;
+        transform: rotate(-45deg);
+    }
+    @else if $direction == right {
+        border-top: $borderSize solid $borderColor;
+        border-right: $borderSize solid $borderColor;
+        transform: rotate(45deg);
+    }
+    @else if $direction == bottom {
+        border-left: $borderSize solid $borderColor;
+        border-bottom: $borderSize solid $borderColor;
+        transform: rotate(-45deg);
+    }
+    @if $direction == left {
+        border-left: $borderSize solid $borderColor;
+        border-bottom: $borderSize solid $borderColor;
+        transform: rotate(45deg);
+    }
+}
+
+
+
+@mixin elipsis {
+    overflow: hidden;
+    text-overflow: ellipsis;
+    white-space: nowrap;
+}
+
+// 多行截断mixin
+@mixin elipsisMulti($lines: 2) {
+  display: -webkit-box;
+  -webkit-line-clamp: $lines; /*超出第$lines行截断*/
+  -webkit-box-orient: vertical;
+  overflow: hidden;
+}
+
+//clearfix mixin
+
+@mixin clearfix() {
+    &:before,
+    &:after {
+        content: "";
+        display: table;
+    }
+    &:after {
+        clear: both;
+        overflow: hidden;
+    }
+}
+@mixin bg-image($url) {
+    background-image: url($url + "@2x.png");
+    @media (-webkit-min-device-pixel-ratio: 3),(min-device-pixel-ratio: 3){
+        background-image: url($url + "@3x.png")
+    }
+}
+// item arrow
+%item-arrow {
+    &::after{
+        content: "";
+        @include arrow;
+        position: absolute;
+        right: .15rem;
+        top: 50%;
+        margin-top: -.01rem;
+        transform: translateY(-50%);
+        box-sizing: border-box;
+    }
+}

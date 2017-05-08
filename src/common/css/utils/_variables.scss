@@ -1,0 +1,23 @@
+@charset "UTF-8";
+
+$font-path: "../font/";
+
+
+//图片路径
+//$bg-path: "http://pic.c-ctrip.com/h5/shopping/";
+$bg-path: "../images/";
+
+//规则定义
+$hack_ie7: "*";
+$legacy-support-for-ie: true  !default;
+
+//基本颜色定义
+$color-error: #ff4646;
+$bgc:                            #f1f1f1 !default;
+$border:                         #dedede !default;
+$gray:                           #ccc !default;
+$brown:                          #2C0405 !default;
+$red:                            #FE0002 !default;
+$pink:                           #FFE1E1 !default;
+$blue:                           #15B7FF !default;
+$yellow:                           #FFFA09 !default;

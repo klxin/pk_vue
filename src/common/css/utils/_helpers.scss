@@ -1,0 +1,24 @@
+@charset "UTF-8";
+
+//一些常用的样式
+
+%position-center {
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    -webkit-transform: translate(-50%,-50%);
+    transform: translate(-50%,-50%);
+}
+
+%ellipsis {
+	white-space: nowrap;
+	overflow: hidden;
+	text-overflow: ellipsis;
+}
+
+%img-center {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  text-align: center;
+}

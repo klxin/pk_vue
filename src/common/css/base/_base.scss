@@ -1,0 +1,33 @@
+@charset "UTF-8";
+
+.fonts10{
+	font-size:.12rem;
+  	-webkit-transform : scale(0.84,0.84);
+  	display:block;
+}
+
+.fliter {
+	position: fixed;
+	bottom: 0;
+	left: 0;
+	width: 100%;
+	z-index: 99;
+}
+.mt10{
+	margin-top: .10rem;
+}
+.mt5{margin-top: .05rem;}
+.mt25{
+	margin-top: .25rem;
+}
+.fl{
+	float: left;
+}
+.fr{
+	float: right;
+}
+.report{
+	color:$red;
+	padding:0 .03rem;
+	font-weight: bold;
+}
